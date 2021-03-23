@@ -3,69 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Aeriallistique</title>
 </head>
 <body>
     <header>
-        <a href="">aeriallistique <span>&#8744;</span> </a>
-        <nav>
-            <li><a href="#">photos</a></li>
+       <p>aeriallistique</p>  <button id="headerBtn"><span>&#8744;</span></button>
+        <nav id="nav">
+            <li><a href="#" class="first">photos</a></li>
             <li><a href="#">videos</a></li>
             <li><a href="#">training</a></li>
             <li><a href="#">contact</a></li>
         </nav>
     </header>
-    <hr>
+    
 
-    <section>
-        <div class="logo_image">
-            <figure><img src="./Resources/teeth.jpg" alt="Andi teeth hanging"></figure>
-        </div>
+    <section class="about-section">
+        <div class="top-div">
+            <div class="logo-image">
+                <figure><img src="./Resources/teeth.jpg" alt="Andi teeth hanging">
+                </figure>
+            </div>
 
-        <div class="body_info">
-            <!--  imperial measurements  -->
-            <div class="imperial">
-                <div class="height">
-                    <div class="number">5ft10</div>
-                    <div class="description">Height</div>
+            <div class="body_info">
+                <!--  imperial measurements  -->
+                <div class="imperial">
+                    <div class="height">
+                        <div class="number">5ft10</div>
+                        <div class="description">Height</div>
+                    </div>
+                    <div class="weight">
+                        <div class="number">160lbs</div>
+                        <div class="description">Weight</div>
+                    </div>
                 </div>
-                <div class="weight">
-                    <div class="number">160lbs</div>
-                    <div class="description">Weight</div>
+                <!--  metric measurements  -->
+                <div class="metric">
+                    <div class="height">
+                        <div class="number">177cm</div>
+                        <div class="description">Height</div>
+                    </div>
+                    <div class="weight">
+                        <div class="number">73kg</div>
+                        <div class="description">Weight</div>
+                    </div>
                 </div>
+                <label for="choose_measurement">Cm/Kg</label>
+                <input type="checkbox" id="choose_measurement">
             </div>
-            <!--  metric measurements  -->
-            <div class="metric">
-                <div class="height">
-                    <div class="number">177cm</div>
-                    <div class="description">Height</div>
-                </div>
-                <div class="weight">
-                    <div class="number">73kg</div>
-                    <div class="description">Weight</div>
-                </div>
-            </div>
-            <label for="choose_measurement">Cm/Kg</label>
-            <input type="checkbox" id="choose_measurement">
         </div>
-        <div class="description">
-            <div class="name-job">
-                <div class="name">Andi</div>
-                <div class="job">Artist</div>
-            </div>
-            <div class="more-info">
-                <span class="circus-tent">&#127914;</span> Aerialist / Hand Balancer <span class="handstand">&#129336; &#127942;</span></div>
-            <div class="moto">I make money being upsidedown.        
-                Romanian. Made in <a href="#">Brasov &#127479;&#127476;</a>, formed across the <span class="globe">&#127757;</span>, found in <a href="#">Manchester &#127468;&#127463;</a>
-            </div>
-            <div class="socials">
-                <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-vimeo"></a>
+        <div class="bottom-div">
+            <div class="description">
+                <div class="name-job">
+                    <div class="name">Andi</div>
+                    <div class="job">Artist</div>
+                </div>
+                <div class="more-info">
+                    <span class="circus-tent">&#127914;</span> Aerialist / Hand Balancer <span class="handstand">&#129336; &#127942;</span></div>
+                <div class="moto">I make money being upsidedown.        
+                    Romanian. Made in <a href="#">Brasov &#127479;&#127476;</a>, formed across the <span class="globe">&#127757;</span>, found in <a href="#">Manchester &#127468;&#127463;</a>
+                </div>
+                <div class="socials">
+                    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-vimeo"></a>
+                </div>
             </div>
         </div>
     </section>
@@ -73,7 +79,9 @@
     <main>
         <div class="highlights">Highlights</div>
         <div class="photos">
-            <button><i class="fa fa-camera"></i></button>
+            <button><span class="material-icons">
+                local_see
+                </span></button>
             <div class="grid-area">
                 <div class="item"><img src="" alt=""></div>
                 <div class="item"><img src="" alt=""></div>
@@ -87,9 +95,50 @@
             </div>
         </div>
         <div class="videos">
-            <button><i class="fa fa-video"></i></button>
+            <button><span class="material-icons">
+                videocam
+                </span></button>
+            <div class="grid-area">
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+            </div>    
+        </div>
+        <div class="training">
+            <button><span class="material-icons">
+                subscriptions
+                </span></button>
+            <div class="grid-area">
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+            </div>    
+        </div>
+        <div class="cv">
+            <button><span class="material-icons">
+                contact_page
+                </span></button>
+            <div class="grid-area">
+                <div class="item"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda reiciendis illum in nulla voluptate facere cum, quidem nostrum. Non quibusdam quaerat accusantium eius odio sequi optio modi? Est, deserunt quo.</p></div>
+                <div class="item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta eos quam similique deleniti sapiente blanditiis, molestiae eum at quibusdam est laudantium aperiam sunt ducimus tempora iure voluptatum saepe id corporis.</p></div>
+                <div class="item"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, inventore laboriosam. Esse quod, vitae numquam fugit nulla illo aperiam earum recusandae iusto voluptatum ut, repudiandae sit eligendi ad quam nam?</p></div>
+            </div>
         </div>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
 
