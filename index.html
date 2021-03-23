@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Aeriallistique</title>
 </head>
 <body>
@@ -15,11 +18,78 @@
             <li><a href="#">contact</a></li>
         </nav>
     </header>
+    <hr>
 
     <section>
         <div class="logo_image">
-            <figure><img src="" alt=""></figure>
+            <figure><img src="./Resources/teeth.jpg" alt="Andi teeth hanging"></figure>
+        </div>
+
+        <div class="body_info">
+            <!--  imperial measurements  -->
+            <div class="imperial">
+                <div class="height">
+                    <div class="number">5ft10</div>
+                    <div class="description">Height</div>
+                </div>
+                <div class="weight">
+                    <div class="number">160lbs</div>
+                    <div class="description">Weight</div>
+                </div>
+            </div>
+            <!--  metric measurements  -->
+            <div class="metric">
+                <div class="height">
+                    <div class="number">177cm</div>
+                    <div class="description">Height</div>
+                </div>
+                <div class="weight">
+                    <div class="number">73kg</div>
+                    <div class="description">Weight</div>
+                </div>
+            </div>
+            <label for="choose_measurement">Cm/Kg</label>
+            <input type="checkbox" id="choose_measurement">
+        </div>
+        <div class="description">
+            <div class="name-job">
+                <div class="name">Andi</div>
+                <div class="job">Artist</div>
+            </div>
+            <div class="more-info">
+                <span class="circus-tent">&#127914;</span> Aerialist / Hand Balancer <span class="handstand">&#129336; &#127942;</span></div>
+            <div class="moto">I make money being upsidedown.        
+                Romanian. Made in <a href="#">Brasov &#127479;&#127476;</a>, formed across the <span class="globe">&#127757;</span>, found in <a href="#">Manchester &#127468;&#127463;</a>
+            </div>
+            <div class="socials">
+                <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+            </div>
         </div>
     </section>
+
+    <main>
+        <div class="highlights">Highlights</div>
+        <div class="photos">
+            <button><i class="fa fa-camera"></i></button>
+            <div class="grid-area">
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"><img src="" alt=""></div>
+            </div>
+        </div>
+        <div class="videos">
+            <button><i class="fa fa-video"></i></button>
+        </div>
+    </main>
 </body>
 </html>
+
