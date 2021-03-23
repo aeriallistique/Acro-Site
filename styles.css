@@ -348,3 +348,130 @@
     display: none;
   }
   
+  /*
+   =====================  Document C S S ==============================
+   */
+
+   /*
+   ==========       HEADER    =====================
+   */
+
+   header
+   {
+       width: 100vw;
+       height: 60px;
+       display: flex;
+       align-items: center;
+       border-bottom: .5px solid gray;
+       position: relative;
+   }
+   header p
+   {
+       text-decoration: none;
+       color: black;
+       font-family:'Roboto', sans-serif;
+       font-size: 1.6rem;
+       margin-left: 1rem;
+       cursor: pointer;
+   }
+   header button
+   {
+    margin-left: .1rem;
+    padding: .6rem 1rem;
+    border: none;
+    background: transparent;
+    outline: transparent;
+    cursor: pointer;
+   }
+   header span
+   {
+    font-weight: 900;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-left:-10px;
+    pointer-events: none;
+   }
+
+
+
+   nav
+   {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: white;
+    border-top: .5px solid gray;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .2s ease-in-out;
+}
+nav li
+{
+    list-style-type: none;
+    margin-left: 2rem;
+}
+nav li a
+{
+    text-decoration: none;
+    color: black;
+    font-family:'Roboto', sans-serif;
+    font-weight: 200;
+    display: inline-block;
+    margin-bottom: .6rem;
+    cursor: pointer;
+}
+nav li a:hover{ color:lightgray;}
+
+/*
+   ==========       SECTION    =====================
+   */
+
+.about-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-div, .bottom-div{
+    width: 100%;
+}
+.top-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+
+}
+.logo-image{
+    width: 30vw;
+    height: 30vw;
+    border: 3px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+.top-div .logo-image figure{
+    width: 98%;
+    height: 98%;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.top-div .logo-image figure img{
+    width: 100%;  
+    display: inline-block;
+}
+
