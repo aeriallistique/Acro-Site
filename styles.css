@@ -356,6 +356,10 @@
    ==========       HEADER    =====================
    */
 
+   body{
+       font-family:'Roboto', sans-serif ;
+   }
+
    header
    {
        width: 100vw;
@@ -405,11 +409,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: white;
+    background: rgb(235, 233, 233);
     border-top: .5px solid gray;
     transform: scaleY(0);
     transform-origin: top;
     transition: all .2s ease-in-out;
+    z-index: 9;
 }
 nav li
 {
@@ -446,8 +451,7 @@ nav li a:hover{ color:lightgray;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
-
+    padding: .2rem 0;
 }
 .logo-image{
     width: 30vw;
@@ -480,29 +484,206 @@ nav li a:hover{ color:lightgray;}
 .body_info{
     width: 69vw;
     height: 30vw;
-    border: 1px solid green;
     position: relative;
     display: flex;
-
+    
 }
 .imperial,
 .metric{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-65%, -50%);
+    width: 60%;
+    height: auto;
+    padding: .5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
 }
 .metric{
     display: none;
 }
+
+.height, .weight{
+    padding: .4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.height .description, .weight .description{
+    font-weight: 300;
+}
+.height .number, .weight .number{
+    font-weight: 500;
+}
+
 .switch-option{
     position: absolute;
-    top: 5px;
+    top: -5px;
     right: 5px;
     display: flex;
     flex-direction: column;
 }
-.switch-option input{ }
+.switch-option input{ border: none;}
 .switch-option label{
     cursor: pointer;
 }
+
+.bottom-div{
+    width: 100%;
+}
+.bottom-div a{
+    text-decoration: none;
+
+}
+.bottom-div .description{
+    padding:.2rem 1rem; 
+}
+
+.name-job, .more-info, .moto{
+    margin-bottom: .4rem;
+}
+.more-info, .moto{
+    font-weight: 300;
+}
+
+.name-job .name{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.name-job .job{
+    color: rgb(94, 92, 92);
+    font-weight: 300;
+}
+
+.socials{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.socials .fa {
+    padding: 5px;
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 3rem;
+  }
+
+  .socials a.hovering:hover {
+    transform: scale(2)!important;
+  }
+  .socials .fa-youtube {
+    background: #bb0000;
+    color: white;
+    border-radius: 10px;
+  }
+  .socials .fa-instagram {
+    background: #125688;
+    color: white;
+    border-radius: 10px;
+  }
+  .socials .fa-vimeo {
+    background: #45bbff;
+    color: white;
+    border-radius: 10px;
+  }
+
+
+  /*
+   ==========       M A I N   ================================
+   */
+
+   main{
+       border: 1px solid red;
+       padding: 0 1rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       height: auto;
+   }
+
+   main .highlights{
+       width: 100%;
+       margin: .5rem 0 0 0;
+       border: 1px solid pink;
+
+   }
+   .button-container{
+       border: 1px solid gray;
+       position: relative;
+       height: 2rem;
+       display: flex;
+       align-items: center;
+   }
+   .button-container button:first-child{
+       position: absolute;
+       left: 20%;
+   }
+   .button-container button:nth-child(2){
+        position: absolute;
+        left: 40%;
+   }
+   .button-container button:nth-child(3){
+        position: absolute;
+        left: 60%;
+   }
+   .button-container button:nth-child(4){
+        position: absolute;
+        left: 80%;
+   }
+
+   .button-container button:first-child,
+   .button-container button:nth-child(2),
+   .button-container button:nth-child(3),
+   .button-container button:nth-child(4){
+        transform: translateX(-50%);
+        border: none;
+        display: flex;
+        background: transparent;
+        cursor: pointer;
+   }
+   .button-container span{
+        pointer-events: none;
+        color: rgb(80, 79, 79);
+    }
+   .button-container button:hover{
+        background-color: tomato;
+   }
+   .main-container{
+        position: relative;
+        border: 1px solid blue;
+        width: 100%;
+        height: auto;
+   }
+
+   .photos, .videos, .training, .cv{
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       bottom: 0;
+   }
+   
+   .photos, .videos, .training, .cv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 3px;
+   }
+   .photos{
+       border: 1px solid black;
+       height: auto;
+   }
+   .photos .item{
+       width: 100%;
+       cursor: pointer;
+   }
+   .photos .item img{
+       width: 100%;
+   }
+
+   .photos, .training, .cv{display: none;}
