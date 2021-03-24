@@ -433,7 +433,8 @@ nav li a:hover{ color:lightgray;}
    */
 
 .about-section{
-    width: 100vw;
+    width: 99vw;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -451,7 +452,7 @@ nav li a:hover{ color:lightgray;}
 .logo-image{
     width: 30vw;
     height: 30vw;
-    border: 3px solid gray;
+    border: 1px solid gray;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -459,9 +460,9 @@ nav li a:hover{ color:lightgray;}
     margin-left: 1rem;
 }
 .top-div .logo-image figure{
-    width: 98%;
-    height: 98%;
-    border: 2px solid white;
+    width: 93%;
+    height: 93%;
+    border: 3px solid white;
     border-radius: 50%;
     overflow: hidden;
     margin: 0;
@@ -471,7 +472,37 @@ nav li a:hover{ color:lightgray;}
 
 }
 .top-div .logo-image figure img{
-    width: 100%;  
+    width: 99%;
+    margin-top: .6rem;
     display: inline-block;
 }
 
+.body_info{
+    width: 69vw;
+    height: 30vw;
+    border: 1px solid green;
+    position: relative;
+    display: flex;
+
+}
+.imperial,
+.metric{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.metric{
+    display: none;
+}
+.switch-option{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.switch-option input{ }
+.switch-option label{
+    cursor: pointer;
+}
