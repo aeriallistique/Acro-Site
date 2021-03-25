@@ -675,14 +675,16 @@ nav li a:hover{ color:lightgray;}
     column-gap: 3px;
    }
    .photos, .videos{
-       border: 1px solid black;
        height: auto;
+       width: 100%;
    }
    .photos .item, .videos .item{
        width: 100%;
        cursor: pointer;
+       border: 1px solid black;
+
    }
-   .photos .item img, .videos .item video{
+   .photos .item img{
        width: 100%;
    }
 
