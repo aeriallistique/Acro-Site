@@ -674,16 +674,18 @@ nav li a:hover{ color:lightgray;}
     grid-template-rows: auto;
     column-gap: 3px;
    }
-   .photos{
+   .photos, .videos{
        border: 1px solid black;
        height: auto;
    }
-   .photos .item{
+   .photos .item, .videos .item{
        width: 100%;
        cursor: pointer;
    }
-   .photos .item img{
+   .photos .item img, .videos .item video{
        width: 100%;
    }
+
+
 
    .photos, .training, .cv{display: none;}
