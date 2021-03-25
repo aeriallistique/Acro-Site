@@ -658,6 +658,8 @@ nav li a:hover{ color:lightgray;}
         border: 1px solid blue;
         width: 100%;
         height: auto;
+        margin-bottom: 1rem;
+
    }
 
    .photos, .videos, .training, .cv{
@@ -672,7 +674,8 @@ nav li a:hover{ color:lightgray;}
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 3px;
+    column-gap: 5px;
+    row-gap: 3px;
    }
    .photos, .videos{
        height: auto;
@@ -681,10 +684,12 @@ nav li a:hover{ color:lightgray;}
    .photos .item, .videos .item{
        width: 100%;
        cursor: pointer;
+       background-color: lightgray;
+       display: flex;
        border: 1px solid black;
 
    }
-   .photos .item img{
+   .photos .item img, .videos .item img{
        width: 100%;
    }
 
