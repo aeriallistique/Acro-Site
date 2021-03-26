@@ -677,22 +677,35 @@ nav li a:hover{ color:lightgray;}
     column-gap: 5px;
     row-gap: 3px;
    }
-   .photos, .videos{
+   .photos, .videos, .training{
        height: auto;
        width: 100%;
    }
-   .photos .item, .videos .item{
+   .photos .item, .videos .item, .training .item{
        width: 100%;
        cursor: pointer;
        background-color: lightgray;
        display: flex;
        border: 1px solid black;
-
+       position: relative;
    }
-   .photos .item img, .videos .item img{
+   .photos .item img, .videos .item img, .training .item img{
        width: 100%;
    }
 
+   .training .item::before{
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform:translate(-50% -50%);
+       width: 0; 
+       height: 0; 
+       border-top: 10% solid transparent;
+       border-bottom: 10% solid transparent; 
+       border-left:30% solid blue; 
+   }
 
 
-   .photos, .training, .cv{display: none;}
+
+   .photos, .videos, .cv{display: none;}
