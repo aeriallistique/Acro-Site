@@ -651,7 +651,7 @@ nav li a:hover{ color:lightgray;}
         color: rgb(80, 79, 79);
     }
    .button-container button:hover{
-        background-color: tomato;
+        opacity: .8;
    }
    .main-container{
         position: relative;
@@ -693,19 +693,25 @@ nav li a:hover{ color:lightgray;}
        width: 100%;
    }
 
-   .training .item::before{
+   .training .item::before, .videos .item::before{
        content: '';
        position: absolute;
        top: 50%;
        left: 50%;
-       transform:translate(-50% -50%);
+       transform: translate(-50%, -50%);
        width: 0; 
        height: 0; 
-       border-top: 10% solid transparent;
-       border-bottom: 10% solid transparent; 
-       border-left:30% solid blue; 
+       border-top: 1em solid transparent;
+       border-bottom: 1em solid transparent; 
+       border-left:1.5em solid rgba(163, 155, 155, 0.639); 
+       
+   }
+
+   .videos .item:hover .videos.item::before{
+    border-left:1.5em solid rgb(216, 11, 11); 
+
    }
 
 
 
-   .photos, .videos, .cv{display: none;}
+   .photos, .training, .cv{display: none;}
