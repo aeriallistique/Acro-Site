@@ -407,7 +407,6 @@
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -418,6 +417,7 @@
     transform-origin: top;
     transition: all .2s ease-in-out;
     z-index: 9;
+    opacity: .8;
 }
 nav li
 {
@@ -624,9 +624,11 @@ nav li a:hover{ color:lightgray;}
    main .highlights{
        width: 100%;
        margin: .5rem 0 0 0;
+       max-width: 1024px;
    }
    main .highlights span{
        font-size: 1.5rem;
+       
    }
 
    .button-container{
@@ -734,4 +736,37 @@ nav li a:hover{ color:lightgray;}
 
    }
 
-   .photos, .videos, .training{display: none;}
+   .photos, .videos, .cv{display: none;}
+
+
+
+
+   /* ========== MEDIA QUERIES ======================================     */
+
+   @media screen and (min-width: 1028px){
+
+        header p{
+            font-size: 2rem;
+        }
+        .bottom-div .description, main{ padding-left: 0;
+            padding-right: 0;
+        }
+        .bottom-div .description{
+            text-align: center;
+        }
+        .name-job .name, .name-job .job{ font-size: 2rem;}
+        .more-info{ font-size: 1.5rem;}
+        .moto{ font-size: 1.3rem;}
+        .socials{
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        .highlights{ 
+            text-align: center;
+            font-weight: 400;
+        }
+        .button-container{ padding: 1.5rem 0;}
+        .button-container button span{
+            font-size: 2.2rem;
+        }
+   }
