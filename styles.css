@@ -358,6 +358,7 @@
 
    body{
        font-family:'Roboto', sans-serif ;
+       background-color: rgb(249, 246, 246);
    }
 
    header
@@ -455,6 +456,7 @@ nav li a:hover{ color:lightgray;}
     justify-content: space-between;
     align-items: center;
     padding: .2rem 0;
+    max-height: 350px;
 }
 .logo-image{
     width: 30vw;
@@ -489,6 +491,7 @@ nav li a:hover{ color:lightgray;}
 .body_info{
     width: 69vw;
     height: 30vw;
+    max-height: 350px;
     position: relative;
     display: flex;
     
@@ -498,7 +501,7 @@ nav li a:hover{ color:lightgray;}
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-65%, -50%);
+    transform: translate(-50%, -50%);
     width: 60%;
     height: auto;
     padding: .5rem;
@@ -526,8 +529,9 @@ nav li a:hover{ color:lightgray;}
 
 .switch-option{
     position: absolute;
-    top: -5px;
-    right: 5px;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
     display: flex;
     flex-direction: column;
 }
@@ -620,8 +624,11 @@ nav li a:hover{ color:lightgray;}
    main .highlights{
        width: 100%;
        margin: .5rem 0 0 0;
-
    }
+   main .highlights span{
+       font-size: 1.5rem;
+   }
+
    .button-container{
        position: relative;
        height: 2rem;
@@ -679,7 +686,7 @@ nav li a:hover{ color:lightgray;}
        bottom: 0;
    }
    
-   .photos, .videos, .training, .cv{
+   .photos, .videos, .training{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -719,6 +726,12 @@ nav li a:hover{ color:lightgray;}
     opacity: .8;
    }
 
+   .cv .item p{
+       font-weight: 300;
+   }
+   .cv .item h3{ font-weight: 400;}
+   main .cv{
 
+   }
 
-   .photos, .videos, .cv{display: none;}
+   .photos, .videos, .training{display: none;}
