@@ -47,6 +47,8 @@ function handleNavButton(){
         navState = true;
     }
 }
+       
+
 
 function initialize(){
     headerBtn.addEventListener('click', handleNavButton);
