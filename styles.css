@@ -665,6 +665,7 @@ nav li a:hover{ color:lightgray;}
         background: transparent;
         cursor: pointer;
    }
+
    .button-container span{
         pointer-events: none;
         color: rgb(80, 79, 79);
@@ -736,7 +737,7 @@ nav li a:hover{ color:lightgray;}
 
    }
 
-   .photos, .videos, .cv{display: none;}
+   .photos, .training, .cv{display: none;}
 
 
 
