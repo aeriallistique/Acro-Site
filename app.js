@@ -1,12 +1,41 @@
 const $ = (q)=> document.getElementById(q);
 const $$ = (q)=> document.querySelector(q);
-const HighlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
+const headerBtn = document.getElementById('headerBtn');
+const nav = document.getElementById('nav');
+
+
+const highlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
 const mainContainerDivs= [$$('.main-container .photos'), $$('.main-container .videos'),
 $$('.main-container .training'), $$('.main-container .cv')]
 
-console.log(mainContainerDivs[3], HighlightsButtons[1])
-const headerBtn = document.getElementById('headerBtn');
-const nav = document.getElementById('nav');
+
+function handleHighlightsBtn(e){
+
+    if(e.target.id === 'photos-btn'){
+        mainContainerDivs[0].classList.remove('display-none');
+        mainContainerDivs[1].classList.add('display-none');
+        mainContainerDivs[2].classList.add('display-none');
+        mainContainerDivs[3].classList.add('display-none');
+    }
+    if(e.target.id === 'videos-btn'){
+        mainContainerDivs[0].classList.add('display-none');
+        mainContainerDivs[1].classList.remove('display-none');
+        mainContainerDivs[2].classList.add('display-none');
+        mainContainerDivs[3].classList.add('display-none');
+    }if(e.target.id === 'training-btn'){
+        mainContainerDivs[0].classList.add('display-none');
+        mainContainerDivs[1].classList.add('display-none');
+        mainContainerDivs[2].classList.remove('display-none');
+        mainContainerDivs[3].classList.add('display-none');
+    }if(e.target.id === 'cv-btn'){
+        mainContainerDivs[0].classList.add('display-none');
+        mainContainerDivs[1].classList.add('display-none');
+        mainContainerDivs[2].classList.add('display-none');
+        mainContainerDivs[3].classList.remove('display-none');
+    }
+}
+
+console.log(mainContainerDivs[3])
 
 let navState = true;
 
@@ -61,6 +90,8 @@ function initialize(){
     headerBtn.addEventListener('click', handleNavButton);
     setDataAttributes(videoItemArray, videosIframeLinks);
     setDataAttributes(trainingItemArray, trainingIframeLinks);
-
+    highlightsButtons.forEach(btn=>{
+        btn.addEventListener('click', handleHighlightsBtn)
+    });
 }
 initialize();
