@@ -2,7 +2,9 @@ const $ = (q)=> document.getElementById(q);
 const $$ = (q)=> document.querySelector(q);
 const headerBtn = document.getElementById('headerBtn');
 const nav = document.getElementById('nav');
-
+const modal = document.getElementById('modal');
+const insideModal = document.getElementById('modal-display');
+let navState = true;
 
 const highlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
 const mainContainerDivs= [$$('.main-container .photos'), $$('.main-container .videos'),
@@ -35,9 +37,15 @@ function handleHighlightsBtn(e){
     }
 }
 
-console.log(mainContainerDivs[3])
+function showClickedPhoto(e){
+    modal.classList.remove('display-none');
+    console.log(e.target.outerHTML)
+    insideModal.innerHTML = e.target.outerHTML;
+}
 
-let navState = true;
+function removeModal(){ modal.classList.add('display-none');}
+
+
 
 const videoItemArray = document.querySelectorAll('.videos .item');
 const trainingItemArray = document.querySelectorAll('.training .item');
@@ -93,5 +101,7 @@ function initialize(){
     highlightsButtons.forEach(btn=>{
         btn.addEventListener('click', handleHighlightsBtn)
     });
+    mainContainerDivs[0].addEventListener('click', showClickedPhoto);
+    modal.addEventListener('click', removeModal);
 }
 initialize();
