@@ -682,6 +682,12 @@ nav li a:hover{ color:lightgray;}
         background: transparent;
         cursor: pointer;
    }
+  
+  .button-container button:focus, 
+  .button-container button:active{
+     outline: none;
+  border-bottom: 2px solid gray;
+}
 
    .button-container span{
         pointer-events: none;
