@@ -1,3 +1,10 @@
+const $ = (q)=> document.getElementById(q);
+const $$ = (q)=> document.querySelector(q);
+const HighlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
+const mainContainerDivs= [$$('.main-container .photos'), $$('.main-container .videos'),
+$$('.main-container .training'), $$('.main-container .cv')]
+
+console.log(mainContainerDivs[3], HighlightsButtons[1])
 const headerBtn = document.getElementById('headerBtn');
 const nav = document.getElementById('nav');
 
