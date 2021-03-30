@@ -381,6 +381,9 @@
         width: 70%;
         max-width: 450px;
         height: auto;
+        
+        justify-content: center;
+        align-items: center;
     }
     .modal-display img{
         width: 100%;
@@ -538,9 +541,7 @@ nav li a:hover{ color:lightgray;}
     display: flex;
     justify-content: space-between;
 }
-.metric{
-    display: none;
-}
+
 
 .height, .weight{
     padding: .4rem;
@@ -563,11 +564,17 @@ nav li a:hover{ color:lightgray;}
     transform: translateX(50%);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+
 }
-.switch-option input{ border: none;}
+.switch-option input{ 
+    border: none;
+    display: none;
+}
 .switch-option label{
     cursor: pointer;
 }
+.choose-measurement{ cursor: pointer;}
 
 .bottom-div{
     width: 100%;
@@ -794,8 +801,8 @@ nav li a:hover{ color:lightgray;}
 
     @media screen and (min-width: 760px){
     main{ height: 75vw;}
-    .switch-option{ top: 8%;}
-
+    .switch-option{  top: 8%;}
+    .switch-option label{padding: 1rem;}
    
 }
    @media screen and (min-width: 1028px){
