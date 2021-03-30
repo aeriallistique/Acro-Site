@@ -11,39 +11,42 @@ const mainContainerDivs= [$$('.main-container .photos'), $$('.main-container .vi
 $$('.main-container .training'), $$('.main-container .cv')]
 
 
-function handleHighlightsBtn(e){
+const showMainContainerDiv = (e)=>{
+    mainContainerDivs.forEach(el =>{
+        if(el.classList.contains(e.target.id)){
+            el.classList.remove('display-none')
+        }else{el.classList.add('display-none')}
+    })
+}
 
-    if(e.target.id === 'photos-btn'){
-        mainContainerDivs[0].classList.remove('display-none');
-        mainContainerDivs[1].classList.add('display-none');
-        mainContainerDivs[2].classList.add('display-none');
-        mainContainerDivs[3].classList.add('display-none');
-    }
-    if(e.target.id === 'videos-btn'){
-        mainContainerDivs[0].classList.add('display-none');
-        mainContainerDivs[1].classList.remove('display-none');
-        mainContainerDivs[2].classList.add('display-none');
-        mainContainerDivs[3].classList.add('display-none');
-    }if(e.target.id === 'training-btn'){
-        mainContainerDivs[0].classList.add('display-none');
-        mainContainerDivs[1].classList.add('display-none');
-        mainContainerDivs[2].classList.remove('display-none');
-        mainContainerDivs[3].classList.add('display-none');
-    }if(e.target.id === 'cv-btn'){
-        mainContainerDivs[0].classList.add('display-none');
-        mainContainerDivs[1].classList.add('display-none');
-        mainContainerDivs[2].classList.add('display-none');
-        mainContainerDivs[3].classList.remove('display-none');
-    }
+function handleHighlightsBtn(e){
+    let target = e.target.id;
+
+    if(target === 'photos-btn' || target === 'videos-btn' || 
+       target === 'training-btn' || target === 'cv-btn'){
+        showMainContainerDiv(e);
+    }else{return}
 }
 
 function showClickedPhoto(e){
     modal.classList.remove('display-none');
-    console.log(e.target.outerHTML)
     insideModal.innerHTML = e.target.outerHTML;
 }
 
-function removeModal(){ modal.classList.add('display-none');}
+function showClickedVideo(e){
+    console.log(e.target.dataset.link);
+    modal.classList.remove('display-none');
+    insideModal.innerHTML = e.target.dataset.link;
+
+}
+
+function removeModal(){ 
+    modal.classList.add('display-none');
+    if(navState === false){
+        nav.style.transform = "scaleY(0)";
+        navState = true;
+    }
+}
 
 
 
@@ -79,11 +82,12 @@ const trainingIframeLinks = [`<iframe width="560" height="315" src="https://www.
 
 function setDataAttributes(divs, links){
     divs.forEach((el, idx)=>{
-        el.setAttribute('data', links[idx]);
+        el.setAttribute('data-link', links[idx]);
     })
 }
 function handleNavButton(){
     if(navState){
+        modal.classList.remove('display-none');
         nav.style.transform = "scaleY(1)";
         navState = false;
     }else{
@@ -102,6 +106,7 @@ function initialize(){
         btn.addEventListener('click', handleHighlightsBtn)
     });
     mainContainerDivs[0].addEventListener('click', showClickedPhoto);
+    mainContainerDivs[1].addEventListener('click', showClickedVideo);
     modal.addEventListener('click', removeModal);
 }
 initialize();
