@@ -1,9 +1,11 @@
 const $ = (q)=> document.getElementById(q);
 const $$ = (q)=> document.querySelector(q);
-const headerBtn = document.getElementById('headerBtn');
-const nav = document.getElementById('nav');
-const modal = document.getElementById('modal');
-const insideModal = document.getElementById('modal-display');
+const headerBtn = $('headerBtn');
+const nav = $('nav');
+const modal = $('modal');
+const insideModal = $('modal-display');
+let modalDisplay = modal.querySelector('.modal-display');
+const switchOption = $('switch-option');
 let navState = true;
 
 const highlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
@@ -34,9 +36,12 @@ function showClickedPhoto(e){
 }
 
 function showClickedVideo(e){
-    console.log(e.target.dataset.link);
     modal.classList.remove('display-none');
     insideModal.innerHTML = e.target.dataset.link;
+    if(modalDisplay.firstElementChild.childNodes.length === 0){
+         modalDisplay.style.display = "flex";
+         console.log(modalDisplay.firstElementChild.childNodes.length)
+        }
 
 }
 
@@ -46,9 +51,29 @@ function removeModal(){
         nav.style.transform = "scaleY(0)";
         navState = true;
     }
+    if(insideModal.innerHTML !== ''){ 
+        modalDisplay.style.display = "block";
+        insideModal.innerHTML = '';
+    }
 }
 
+function handleSwitchOption(){
+    let input = $('choose_measurement');
+    let label = $('switch-label');
+    let imperial = $('imperial');
+    let metric = $('metric');
+    console.log(input.checked)
+    if(!input.checked){
+        metric.classList.add('display-none')
+        imperial.classList.remove('display-none')
+        label.innerText = 'cm/kg'
+    }else{
+        metric.classList.remove('display-none')
+        imperial.classList.add('display-none')
+        label.innerText = 'ft/lbs'
 
+    }
+}
 
 const videoItemArray = document.querySelectorAll('.videos .item');
 const trainingItemArray = document.querySelectorAll('.training .item');
@@ -105,8 +130,11 @@ function initialize(){
     highlightsButtons.forEach(btn=>{
         btn.addEventListener('click', handleHighlightsBtn)
     });
+    switchOption.addEventListener('click', handleSwitchOption);
+
     mainContainerDivs[0].addEventListener('click', showClickedPhoto);
     mainContainerDivs[1].addEventListener('click', showClickedVideo);
+    mainContainerDivs[2].addEventListener('click', showClickedVideo);
     modal.addEventListener('click', removeModal);
 }
 initialize();
