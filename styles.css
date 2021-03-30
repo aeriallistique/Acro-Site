@@ -365,20 +365,21 @@
     /* ========== MODAL STYLES ======================================     */
 
     .overlay{
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background-color: rgba(233, 231, 231, 0.699);
-        z-index: 999;
+        z-index: 990;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .modal-display{
-        width: 50%;
+        width: 70%;
+        max-width: 450px;
         height: auto;
     }
     .modal-display img{
@@ -439,12 +440,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: rgb(235, 233, 233);
+    background: rgb(245, 243, 243);
     border-top: .5px solid gray;
     transform: scaleY(0);
     transform-origin: top;
     transition: all .2s ease-in-out;
-    z-index: 9;
+    z-index: 999;
     opacity: .8;
 }
 nav li
@@ -457,7 +458,7 @@ nav li a
     text-decoration: none;
     color: black;
     font-family:'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     display: inline-block;
     margin-bottom: .6rem;
     cursor: pointer;
@@ -744,6 +745,9 @@ nav li a:hover{ color:lightgray;}
    }
    .photos .item img, .videos .item img, .training .item img{
        width: 100%;
+   }
+   .videos .item img, .training .item img{
+       pointer-events: none;
    }
 
    .photos .item:hover{ opacity: .7;}
