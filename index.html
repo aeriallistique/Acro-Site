@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="overlay display-none" id="modal">
-        <div class="modal-display" id="modal-display"></div>
+      <div class="modal-display" id="modal-display"></div>
     </div>
     <header>
        <p>aeriallistique</p>  <button id="headerBtn"><span>&#8744;</span></button>
@@ -34,7 +34,7 @@
 
             <div class="body_info">
                 <!--  imperial measurements  -->
-                <div class="imperial">
+                <div class="imperial" id="imperial">
                     <div class="height">
                         <div class="number">5ft10</div>
                         <div class="description">Height</div>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <!--  metric measurements  -->
-                <div class="metric">
+                <div class="metric display-none" id="metric">
                     <div class="height">
                         <div class="number">177cm</div>
                         <div class="description">Height</div>
@@ -55,9 +55,9 @@
                         <div class="description">Weight</div>
                     </div>
                 </div>
-                <div class="switch-option">
-                    <label for="choose_measurement">cm/kg</label>
-                    <input type="checkbox" id="choose_measurement">
+                <div class="switch-option" id="switch-option">
+                    <label for="choose_measurement" id="switch-label">cm/kg</label>
+                    <input type="checkbox" id="choose_measurement" class="choose-measurement">
                 </div>
             </div>
         </div>
@@ -70,13 +70,13 @@
                 <div class="more-info">
                     <span class="circus-tent">&#127914;</span> Aerialist / Hand Balancer <span class="handstand">&#129336; &#127942;</span></div>
                 <div class="moto">I make money being upsidedown. <br>       
-                     Made in <a href="#">Brasov &#127479;&#127476;</a>, formed across the <span class="globe">&#127757;</span>, found in <a href="#">Manchester &#127468;&#127463;</a>
+                     Made in <a href="https://www.google.co.uk/maps/place/Bra%C8%99ov,+Romania/@45.6426802,25.5887252,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNuIW67IYnrbNWJAFBHxj5-N5AYBUkHRaObkuH5!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNuIW67IYnrbNWJAFBHxj5-N5AYBUkHRaObkuH5%3Dw86-h114-k-no!7i3456!8i4608!4m5!3m4!1s0x40b35b862aa214f1:0x6cf5f2ef54391e0f!8m2!3d45.6426802!4d25.5887252">Brasov &#127479;&#127476;</a>, formed across the <span class="globe">&#127757;</span>, found in <a href="https://www.google.co.uk/maps/place/Manchester/@53.472225,-2.293502,12z/data=!3m1!4b1!4m5!3m4!1s0x487a4d4c5226f5db:0xd9be143804fe6baa!8m2!3d53.4807593!4d-2.2426305">Manchester &#127468;&#127463;</a>
                 </div>
                 <div class="socials">
                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
-                    <a href="#" class="fa fa-instagram hovering"></a>
-                    <a href="#" class="fa fa-youtube hovering"></a>
-                    <a href="#" class="fa fa-vimeo hovering"></a>
+                    <a href="https://www.instagram.com/aeriallistique/" class="fa fa-instagram hovering"></a>
+                    <a href="https://www.youtube.com/channel/UCaEL0Hv2nDDVGRcYGXKrwXg" class="fa fa-youtube hovering"></a>
+                    <a href="https://vimeo.com/user8698933" class="fa fa-vimeo hovering"></a>
                 </div>
             </div>
         </div>
