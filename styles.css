@@ -711,7 +711,8 @@ nav li a:hover{ color:lightgray;}
    }
   
   .button-container button:focus, 
-  .button-container button:active{
+  .button-container button:active,
+  .button-container button:hover{
     outline: none;
     border-bottom: 2px solid rgb(24, 56, 125);
 }
