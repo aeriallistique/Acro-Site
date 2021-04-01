@@ -749,7 +749,12 @@ nav li a:hover{ color:lightgray;}
        background-color: lightgray;
        display: flex;
        position: relative;
+       
    }
+
+   .photos .item{ max-height: 50vw;}
+   .videos .item, .training .item{ max-height: 40vw;}
+
    .photos .item img, .videos .item img, .training .item img{
        width: 100%;
    }
