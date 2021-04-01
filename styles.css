@@ -597,6 +597,11 @@ nav li a:hover{ color:lightgray;}
 .more-info, .moto{
     font-weight: 300;
 }
+.moto .brasov:hover,
+.moto .manchester:hover{
+    color: rgb(58, 48, 48);
+    font-weight: 400;
+}
 
 .name-job .name{
     font-weight: 500;
