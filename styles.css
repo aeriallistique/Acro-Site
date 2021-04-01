@@ -712,18 +712,20 @@ nav li a:hover{ color:lightgray;}
   
   .button-container button:focus, 
   .button-container button:active{
-     outline: none;
-  border-bottom: 2px solid gray;
+    outline: none;
+    border-bottom: 2px solid rgb(24, 56, 125);
 }
 
    .button-container span{
         pointer-events: none;
         color: rgb(80, 79, 79);
     }
-   .button-container button:hover{
-        opacity: .7;
+   .button-container button:hover span{
+      color: rgb(24, 56, 125);
    }
-   
+   .button-container button:focus span,
+   .button-container button:active span
+   { color:rgb(24, 56, 125)}
 
    .main-container{
         position: relative;
