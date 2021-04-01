@@ -565,7 +565,11 @@ nav li a:hover{ color:lightgray;}
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
+    padding: .2rem;
+    border: 1px solid rgb(194, 191, 191);
+    border-radius: 8px;
+    background-color: rgb(238, 236, 236);
+    box-shadow: 2px 2px 3px lightgray;
 }
 .switch-option input{ 
     border: none;
@@ -803,11 +807,17 @@ nav li a:hover{ color:lightgray;}
     .main-container{height: 100vh;}
     .switch-option{ top: 5%;}
 }
+@media screen and ( max-width: 500px){
+    .switch-option{padding: .1rem;}
+    .switch-option label{ font-size: .8rem;}
+}
 
     @media screen and (min-width: 760px){
     main{ height: 75vw;}
-    .switch-option{  top: 8%;}
-    .switch-option label{padding: 1rem;}
+    .switch-option{  
+        top: 8%;
+        padding: .2rem;
+    }
    
 }
    @media screen and (min-width: 1028px){
