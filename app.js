@@ -62,7 +62,6 @@ function handleSwitchOption(){
     let label = $('switch-label');
     let imperial = $('imperial');
     let metric = $('metric');
-    console.log(input.checked)
     if(!input.checked){
         metric.classList.add('display-none')
         imperial.classList.remove('display-none')
@@ -120,9 +119,7 @@ function initialize(){
     headerBtn.addEventListener('click', handleNavButton);
     setDataAttributes(videoItemArray, videosIframeLinks);
     setDataAttributes(trainingItemArray, trainingIframeLinks);
-    highlightsButtons.forEach(btn=>{
-        btn.addEventListener('click', handleHighlightsBtn)
-    });
+    highlightsButtons.forEach( btn => btn.addEventListener('click', handleHighlightsBtn) );
     switchOption.addEventListener('click', handleSwitchOption);
 
     mainContainerDivs[0].addEventListener('click', showClickedPhoto);
