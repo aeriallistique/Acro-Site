@@ -808,7 +808,6 @@ nav li a:hover{ color:lightgray;}
     .switch-option{ top: 5%;}
 }
 @media screen and ( max-width: 500px){
-    .switch-option{padding: .1rem;}
     .switch-option label{ font-size: .8rem;}
 }
 
