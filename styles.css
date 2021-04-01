@@ -753,7 +753,7 @@ nav li a:hover{ color:lightgray;}
    }
 
    .photos .item{ max-height: 50vw;}
-   .videos .item, .training .item{ max-height: 40vw;}
+   .videos .item, .training .item{ max-height: 35vw;}
 
    .photos .item img, .videos .item img, .training .item img{
        width: 100%;
