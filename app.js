@@ -6,11 +6,23 @@ const modal = $('modal');
 const insideModal = $('modal-display');
 let modalDisplay = modal.querySelector('.modal-display');
 const switchOption = $('switch-option');
+const navLinks = document.querySelectorAll('nav li a');
 let navState = true;
 
 const highlightsButtons = [ $('photos-btn'),$('videos-btn'),$('training-btn'),$('cv-btn')]
 const mainContainerDivs= [$$('.main-container .photos'), $$('.main-container .videos'),
 $$('.main-container .training'), $$('.main-container .cv')]
+
+
+// anchor tags handle function 
+function handleNavLinks(e){
+    let target = e.target.classList.valuel;
+    if(target === 'first'){}
+    if(target === 'first'){}
+    if(target === 'first'){}
+    if(target === 'first'){}
+    
+}
 
 
 const showMainContainerDiv = (e)=>{
@@ -126,5 +138,7 @@ function initialize(){
     mainContainerDivs[1].addEventListener('click', showClickedVideo);
     mainContainerDivs[2].addEventListener('click', showClickedVideo);
     modal.addEventListener('click', removeModal);
+
+    navLinks.forEach(link =>{ link.addEventListener('click', handleNavLinks)});
 }
 initialize();
